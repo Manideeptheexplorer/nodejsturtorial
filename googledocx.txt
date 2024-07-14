@@ -1,0 +1,467 @@
+1: Java - Class Behavior
+
+public class Rectangle {
+    private int length;
+    private int width;
+
+    public Rectangle(int l, int w) {
+        length = l;
+        width = w;
+    }
+
+    public int calculateArea() {
+        return length * width;
+    }
+}
+
+Rectangle rect = new Rectangle(5, 8);
+int area = rect.calculateArea();
+System.out.println("Area of the rectangle: " + area);
+Statements Box:
+The code snippet creates an instance of the Rectangle class with specified dimensions.
+The calculateArea method computes the area of the rectangle.
+An error will occur when accessing rect.calculateArea().
+The Rectangle class lacks a constructor.
+The code snippet prints the perimeter of the rectangle.
+
+
+2: Python - Function and List Manipulation
+Code Snippet:
+
+def modify_list(nums):
+    result = []
+    for num in nums:
+        if num % 2 == 0:
+            result.append(num ** 2)
+        else:
+            result.append(num * 3)
+    return result
+
+numbers = [1, 2, 3, 4, 5]
+output = modify_list(numbers)
+print(output)
+
+
+Statements Box:
+The code snippet squares even numbers and triples odd numbers in the list.
+The output will be [1, 4, 9, 16, 25].
+There is a syntax error in the modify_list function.
+The code snippet only appends even numbers to the result list.
+The output will be [1, 6, 3, 16, 5].
+
+
+3: C - Array and Function Behavior
+Code Snippet:
+#include <stdio.h>
+
+void modifyArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] += 10;
+    }
+}
+
+int main() {
+    int nums[] = {3, 6, 9, 12, 15};
+    int len = sizeof(nums) / sizeof(nums[0]);
+
+    modifyArray(nums, len);
+
+    for (int i = 0; i < len; i++) {
+        printf("%d ", nums[i]);
+    }
+    return 0;
+}
+Statements Box:
+The code snippet increments each element in the nums array by 10.
+The output will be 13 16 19 22 25.
+There is an error in the modifyArray function declaration.
+The code snippet only prints even numbers.
+The output will be 3 6 9 12 15.
+
+
+4: Java - Inheritance and Method Overriding
+Code Snippet:
+
+class Vehicle {
+    public void sound() {
+        System.out.println("Vroom");
+    }
+}
+
+class Car extends Vehicle {
+    public void sound() {
+        System.out.println("Honk");
+    }
+}
+
+Vehicle v = new Car();
+v.sound();
+
+Statements Box:
+The code snippet creates an instance of the Car class and invokes the sound method, printing "Vroom".
+The output will be "Honk".
+There is an error in the class declarations.
+The code snippet only prints "Vroom".
+The code snippet lacks an instance of the Vehicle class.
+
+5: Python - Dictionary Manipulation
+Code Snippet:
+
+def modify_dict(input_dict):
+    input_dict['color'] = 'blue'
+    input_dict['size'] = 'large'
+    input_dict.pop('type')
+    return input_dict
+
+my_dict = {'type': 'circle', 'size': 'medium'}
+new_dict = modify_dict(my_dict)
+print(new_dict)
+
+Statements Box:
+The code snippet updates the my_dict dictionary by adding 'color' and 'size' keys.
+The output will be {'color': 'blue', 'size': 'large'}.
+There is a syntax error in the code.
+The code snippet only removes 'type' key from the dictionary.
+The output will be {'type': 'circle', 'size': 'large'}.
+
+
+Solutions:
+
+ 1: Java - Class Behavior
+Correct Statement: 1. The code snippet creates an instance of the Rectangle class with specified dimensions.
+Output: Area of the rectangle: 40
+
+
+ 2: Python - Function and List Manipulation
+Correct Statement: 1. The code snippet squares even numbers and triples odd numbers in the list.
+Output: [3, 4, 9, 16, 15]
+
+ 3: C - Array and Function Behavior
+Correct Statement: 1. The code snippet increments each element in the nums array by 10.
+Output: 13 16 19 22 25
+
+
+ 4: Java - Inheritance and Method Overriding
+Correct Statement: 2. The output will be "Honk".
+Output: Honk
+
+
+ 5: Python - Dictionary Manipulation
+Correct Statement: 1. The code snippet updates the my_dict dictionary by adding 'color' and 'size' keys.
+Output: {'color': 'blue', 'size': 'large'}
+a) num1 == num2
+    num3 == num4
+b) num1 == num2
+    num3 != num4
+c) num1 != num2
+    num3 == num4
+d) num1 != num2
+    num3 != num4
+main(){
+int x,y,m,n;
+scanf("%d %d",&x,&y);
+/Assume x>0 and y>0/
+m = x
+n = y
+while (m! = n){
+	if (m > n)
+	   m = m - n
+	else
+	   n=n - m :
+}
+printf("%d",n);
+}
+The program computes:
+(a) x+y using repeated subtraction.
+(b) x mod y using repeated subtraction.
+(c) The greatest common divisor of x and y.
+(d) The least common multiple of x and y
+int main(){
+	
+	int a,b,c;
+	a=5;
+	b=2;
+	c=a+b+1;
+	a=a-1;
+	b=b-1;
+	printf("%d %d %d",a,b,c); 
+	                   
+	return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    int y = 5;
+
+    int result = x - y;
+
+    printf("%d\n", result);
+
+    return 0;
+}
+public class BetterNegativeNumberExample {
+    public static void main(String[] args) {
+        int x = 0xFFFFFF81;  
+
+        System.out.println(x);
+    }
+}
+
+
+
+---------LARGEST
+.data
+array db 2,3,4,5,7
+largest db ?
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+    xor bx,bx
+    mov al,array[bx]
+    mov largest,al
+l1:
+inc bx
+cmp bx,5
+je exit
+mov al,array[bx]
+cmp al,largest
+jg update_largest
+jmp l1
+
+update_largest:
+mov largest,al
+jmp l1
+
+exit:
+main endp
+end main
+
+-------------------SUM
+.data
+a dw 5
+b dw 4
+c dw ?
+.code
+main proc
+mov ax,@data
+mov ds,ax
+mov ax,a
+add ax,b
+mov c,ax
+exit:
+main endp
+end main
+
+--------------SUM OF TWO ARRAYS
+.data
+a db 1,3,5,7
+b db 2,4,6,8
+c db 4 dup(?)
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+    mov bx,0
+l1:
+mov al,a[bx]
+add al,b[bx]
+mov c[bx],al
+inc bx
+cmp bx,4
+je exit
+jmp l1
+
+
+exit:
+main endp 
+end main
+
+------------EVENODD
+.data
+a db 1,2,3,4,5,6,7,8
+even db 4 dup(?)
+odd db 4 dup(?)
+.code
+main proc
+mov ax,@data
+mov ds,ax
+mov bx,0
+mov si,0
+mov di,0
+l1:
+mov al,a[bx] 
+inc bx
+cmp bx,9
+je exit
+test al,1
+jz eve_
+mov odd[si],al
+inc si
+jmp l1
+
+
+eve_:
+mov even[di],al
+inc di
+
+jmp l1     
+exit:
+main endp
+end main
+
+-----------FACTORIAL
+.data
+a dw 5
+b dw ?
+.code
+main proc
+mov ax,@data
+mov ds,ax
+mov si,5
+mov ax,a
+l1:
+cmp si,1
+je exit
+dec si
+mul si
+jmp l1
+
+
+
+exit:
+mov b,ax
+main endp
+end main
+
+----------------
+LCM AND GCD
+.data
+a dw 20
+b dw 30
+c dw ?
+d dw ?
+.code
+main proc
+mov ax,@data
+mov ds,ax
+mov bx,a
+
+
+l1:
+mov dx,0
+mov ax,b
+div bx
+cmp dx,0
+je l2
+dec bx
+jmp l1
+
+
+l2:
+mov dx,0
+mov ax,a
+div bx
+cmp dx,0
+je exit
+dec bx
+jmp l1
+
+exit:
+mov c,bx
+mov ax,a
+mul b
+div c
+mov d,ax
+main endp
+end main
+--------------linear search
+.data
+a db 2,6,9,23,4
+b db ?          
+msg1 db "elements found in array $"
+msg2 db "elements not found in array $ " 
+print macro msg
+mov ah ,09h
+lea dx,msg
+int 21h
+endm
+
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+    mov bx,0
+compare:
+mov al,a[bx]
+cmp al,6
+je loop
+inc bx
+cmp bx,5
+je exitt
+jmp compare
+loop:
+print msg1
+
+jmp exit
+exitt:
+print msg2
+
+jmp exit
+exit:
+main endp
+end main
+
+
+
+---------------primenum
+-org 100h             ; Set the origin to 100h. This is typical for COM files.
+.model small         ; Use the small memory model: one segment for code and one for data.
+.stack               ; Define the stack segment.
+.code                ; Begin the code segment.
+
+main proc            ; Define the start of the 'main' procedure.
+
+mov ax,@data         ; Load the address of the data segment into AX.
+mov ds,ax            ; Move the address from AX to DS, setting up the data segment.
+
+mov dl,1             ; Initialize DL to 1. DL will be used to find prime numbers.
+mov cx,10            ; Set the loop counter (CX) to 10. This controls how many prime numbers to find.
+mov si,offset primenum ; Load the offset address of 'primenum' into SI. SI will be used as an index to store the prime numbers.
+
+l1: mov bl,2         ; Label 'l1' for the loop. Initialize BL to 2. BL is used as a divisor in the prime-checking logic.
+add dl,1             ; Increment DL to test the next number for primality.
+cmp dl,2             ; Compare DL with 2.
+je insert            ; If DL equals 2, jump to 'insert' because 2 is a prime number.
+
+logic: mov ah,0      ; Label 'logic' for the loop. Clear AH for the division operation.
+mov al,dl            ; Move the number to be tested (DL) into AL.
+div bl               ; Divide AL by BL. The quotient is in AL, and the remainder is in AH.
+cmp ah,0             ; Compare the remainder (AH) to 0.
+je l1                ; If the remainder is 0, the number is not prime, so jump back to 'l1' to test the next number.
+add bl,1              ; Increment BL to test the next divisor.
+cmp bl,al            ; Compare BL with AL (the number being tested).
+jb logic             ; If BL is less than AL, go back to 'logic' to test the next divisor.
+jmp insert           ; If no divisors evenly divide DL, it must be prime, so jump to 'insert'.
+
+insert: mov [si],dl  ; Label 'insert'. Store the prime number (DL) at the memory location pointed to by SI.
+inc si               ; Increment SI to point to the next storage location in 'primenum'.
+loop l1              ; Decrement CX and, if CX is not zero, jump back to 'l1' to find the next prime number.
+
+mov ah,4ch          
+int 21h             
+main endp            
+
+.data                
+primenum db 10 dup(?)
+
+end           
+ret
+
+
+
+s
+
+
+
